@@ -8,6 +8,7 @@ namespace TaskGUI
         public Form1()
         {
             InitializeComponent();
+            textBox1.Text = Properties.Settings.Default.InputSentence;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -29,6 +30,9 @@ namespace TaskGUI
                 resultOutput += ($"{kvp.Key}: {kvp.Value}%\n");
             }
             Results.Text = resultOutput;
+
+            Properties.Settings.Default.InputSentence = sentenceInput;
+            Properties.Settings.Default.Save();
         }
     }
     public class Sentence
