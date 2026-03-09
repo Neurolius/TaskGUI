@@ -1,5 +1,36 @@
+using System;
+
 namespace TaskGUI
 {
+
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var sentenceInput = textBox1.Text ?? "";
+            var sentence = new Sentence { Text = sentenceInput };
+            var letterPercent = Logic.CalculateLetterPercent(sentence);
+            var eachLetterPercent = Logic.CalculateEachLetterPercent(sentence);
+            string resultOutput = "";
+            resultOutput+=($"Процент букв в предложении: {letterPercent:F2}%\n");
+            resultOutput += ("Процент каждой буквы:\n");
+            foreach (var kvp in eachLetterPercent)
+            {
+                resultOutput += ($"{kvp.Key}: {kvp.Value}%\n");
+            }
+            Results.Text = resultOutput;
+        }
+    }
     public class Sentence
     {
         public string Text { get; set; }
@@ -69,16 +100,4 @@ namespace TaskGUI
         }
     }
 
-    public partial class Form1 : Form
-    {
-        public Form1()
-        {
-            InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-    }
 }

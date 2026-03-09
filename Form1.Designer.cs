@@ -36,6 +36,7 @@
             button1.TabIndex = 0;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox1
             // 
@@ -52,7 +53,6 @@
             label1.Size = new Size(128, 15);
             label1.TabIndex = 2;
             label1.Text = "Введите предложение";
-            
             // 
             // Results
             // 
