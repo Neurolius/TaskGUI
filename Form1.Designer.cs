@@ -30,17 +30,17 @@
             // 
             // button1
             // 
-            button1.Location = new Point(68, 126);
+            button1.Location = new Point(25, 41);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(112, 41);
             button1.TabIndex = 0;
-            button1.Text = "button1";
+            button1.Text = "Расчитать";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(35, 97);
+            textBox1.Location = new Point(12, 12);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(158, 23);
             textBox1.TabIndex = 1;
@@ -48,7 +48,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(199, 100);
+            label1.Location = new Point(188, 15);
             label1.Name = "label1";
             label1.Size = new Size(128, 15);
             label1.TabIndex = 2;
@@ -57,7 +57,7 @@
             // Results
             // 
             Results.AutoSize = true;
-            Results.Location = new Point(68, 178);
+            Results.Location = new Point(25, 100);
             Results.Name = "Results";
             Results.Size = new Size(69, 15);
             Results.TabIndex = 3;
@@ -67,7 +67,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(354, 583);
+            ClientSize = new Size(354, 425);
             Controls.Add(Results);
             Controls.Add(label1);
             Controls.Add(textBox1);
